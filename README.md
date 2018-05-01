@@ -1,4 +1,3 @@
-# React hot or cold solution
+# Compare to Thinkful React hot or cold solution
 
 [GitHub](https://github.com/Thinkful-Ed/react-hot-cold)
-

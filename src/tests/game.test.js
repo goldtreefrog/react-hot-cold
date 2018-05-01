@@ -15,8 +15,14 @@ describe("<Game />", () => {
   it("Can make guesses", () => {
     let wrapper = shallow(<Game />);
     wrapper.setState({
-      correctAnswer: 50
+      correctAnswer: 70
     });
     wrapper.instance().makeGuess(5);
+    expect(wrapper.state("guesses")).toEqual([5]);
+    expect(wrapper.state("feedback")).toEqual("You're Ice Cold...");
+
+    wrapper.instance().makeGuess(65);
+    expect(wrapper.state("guesses")).toEqual([5, 65]);
+    expect(wrapper.state("feedback")).toEqual("You're Hot!");
   });
 });
